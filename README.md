@@ -1,0 +1,2 @@
+# ijkplayer_rtsp_android
+优化后ijkplayer播放器支持rtsp拉流、低延迟
