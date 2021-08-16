@@ -57,7 +57,7 @@ IjkMediaPlayer.OPT_CATEGORY_FORMAT |"rtsp_flags"|string|tcp|prefer_tcp|
 
 ## 项目中使用ijkplayer 
 
-
+方法一：
 1.将AndroidIjkplayer-1.0.0.aar 放到app--->libs 目录下
 2.在app的 build.gradle 中dependencies节点前单独添加
 repositories {
@@ -65,6 +65,19 @@ repositories {
         dirs 'libs'
     }
 }
+
+方法二：
+- 在项目(最外层)的build.gradle 下面添加仓库地址 
+
+```
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://github.com/oceanhub168pub/maven_repo/raw/master" }  // 这一句
+    }
+}
+```
 
 依赖添加
 implementation(name: 'AndroidIjkplayer-1.0.0.aar', ext: 'aar')
