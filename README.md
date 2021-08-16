@@ -73,6 +73,7 @@ implementation(name: 'AndroidIjkplayer-1.0.0.aar', ext: 'aar')
     
     
 2. 实现 IjkYhVideoView.VideoViewCallback 接口
+
         mVideoView = (IjkYhVideoView) findViewById(R.id.videoView);
         mMediaController = (IjkYhMediaController) findViewById(R.id.media_controller);
         mVideoView.setMediaController(mMediaController);
