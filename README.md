@@ -3,11 +3,11 @@
 
 
 ## 编译ijkplayer ,支持rtsp拉流、低延迟
-https://www.jianshu.com/p/b48e58fa9694?tdsourcetag=s_pctim_aiomsg
-
 
 git clone https://github.com/Bilibili/ijkplayer.git ijkplayer-android
+
 cd ijkplayer-android
+
 git checkout -B latest k0.8.4
 
 ./init-android.sh  
@@ -31,6 +31,29 @@ cd ..
 ./compile-ijk.sh all
 
 至此，编译出libijkffmpeg.so 、 libijkplayer.so 、 libijksdk.so
+
+## 参数介绍
+>  mMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "fast", 1);
+
+类型|参数|参数类型|说明|备注|无
+:-:|:-:|:-:|:-:|:-:|:-:
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"fast"|int|丢帧阈值|1|
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"probesize"|int|丢帧阈值|200|
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"flush_packets"|int|丢帧阈值|1|
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"framedrop"|int|丢帧阈值|1|
+IjkMediaPlayer.OPT_CATEGORY_CODEC |"skip_loop_filter"|int|视频帧率|48|
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"packet-buffering"|int|packet缓存|0|
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"infbuf"|int|不限制拉流缓存大小|1|
+IjkMediaPlayer.OPT_CATEGORY_FORMAT |"max-buffer-size"|int|最大缓存数量|0|
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"min-frames"|int|最小解码帧数|2|
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"start-on-prepared"|int|启动预加载|1|
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"mediacodec"|int|是否开启硬加载|0：开启|
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"mediacodec-auto-rotate"|int|自动旋屏|0|
+IjkMediaPlayer.OPT_CATEGORY_PLAYER |"mediacodec-handle-resolution-change"|int|处理分辨率变化|0|
+IjkMediaPlayer.OPT_CATEGORY_FORMAT |"analyzeduration"|int|设置分析流时长|2000000|
+IjkMediaPlayer.OPT_CATEGORY_FORMAT |"rtsp_transport"|string|可以改为tcp协议：|tcp|
+IjkMediaPlayer.OPT_CATEGORY_FORMAT |"rtsp_transport"|string|可以改为tcp协议：|tcp|
+IjkMediaPlayer.OPT_CATEGORY_FORMAT |"rtsp_flags"|string|tcp|prefer_tcp|
 
 ## 项目中使用ijkplayer 
 
