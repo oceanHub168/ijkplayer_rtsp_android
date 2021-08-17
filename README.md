@@ -58,6 +58,7 @@ IjkMediaPlayer.OPT_CATEGORY_FORMAT |"rtsp_flags"|string|tcp|prefer_tcp|
 ## 项目中使用ijkplayer 
 
 添加权限
+~~~
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -65,6 +66,7 @@ IjkMediaPlayer.OPT_CATEGORY_FORMAT |"rtsp_flags"|string|tcp|prefer_tcp|
 <uses-permission android:name="android.permission.CAMERA"/>
 <uses-permission android:name="android.permission.WAKE_LOCK"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+~~~
 
 在app的build.gradle中的android下的defaultConfig节点下添加
 
