@@ -75,6 +75,7 @@ repositories {
         dirs 'libs'
     }
 }
+
 3.在app的build.gradle 中的dependencies节点中添加依赖
 
 api 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
