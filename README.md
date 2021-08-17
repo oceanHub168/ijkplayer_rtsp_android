@@ -140,21 +140,19 @@ implementation(name: 'AndroidIjkplayer-1.0.0', ext: 'aar')
         mVideoView.start();
         
         
-    @Override
-    public void onBackPressed() {
-    
+       @Override
+       public void onBackPressed() {
         if (this.isFullscreen) {
             mVideoView.setFullscreen(false);
         } else {
             super.onBackPressed();
         }
-    }
+       }
     
     
-    @Override
-    public void onDestory() {
-    
+      @Override
+      public void onDestory() {
          mVideoView.closePlayer();
-    }
+      }
 
 
