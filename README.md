@@ -57,18 +57,28 @@ IjkMediaPlayer.OPT_CATEGORY_FORMAT |"rtsp_flags"|string|tcp|prefer_tcp|
 
 ## 项目中使用ijkplayer 
 
+添加权限
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-permission android:name="android.permission.WAKE_LOCK"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
 方法一：
 1.将AndroidIjkplayer-1.0.0.aar 放到app--->libs 目录下
 2.在app的 build.gradle 中dependencies节点前单独添加
 
 repositories {
-
     flatDir {
-    
         dirs 'libs'
-        
     }
 }
+3.在app的build.gradle 中的dependencies节点中添加依赖
+
+api 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
+
 
 方法二：
 - 在项目(最外层)的build.gradle 下面添加仓库地址 
