@@ -66,6 +66,12 @@ IjkMediaPlayer.OPT_CATEGORY_FORMAT |"rtsp_flags"|string|tcp|prefer_tcp|
 <uses-permission android:name="android.permission.WAKE_LOCK"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+在app的build.gradle中的android下的defaultConfig节点下添加
+
+ndk {
+       abiFilters 'armeabi-v7a'
+ }
+
 方法一：
 1.将AndroidIjkplayer-1.0.0.aar 放到app--->libs 目录下
 2.在app的 build.gradle 中dependencies节点前单独添加
